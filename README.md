@@ -1,2 +1,2 @@
 # etch-a-sketch
-Etch a sketch in JavaScript
+Etch a Sketch in JavaScript
