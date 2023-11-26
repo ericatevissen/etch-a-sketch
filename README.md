@@ -1,2 +1,1 @@
-# etch-a-sketch
-Etch a Sketch in JavaScript
+a previous etch-a-sketch in javascript project, remade in react
