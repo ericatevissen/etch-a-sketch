@@ -18,12 +18,16 @@ export default function App() {
     setPixelColors(updatedPixelColors);
   }
 
+  function handleClean() {
+    setPixelColors(Array(canvasSize * canvasSize).fill("white"));
+  }
+
   return (
     <>
       <h1>Etch a Sketch</h1>
       <div className="container">
         <div className="controls">
-          <CleanButton />
+          <CleanButton handleClean={handleClean}/>
           <ResizeButton handleResize={handleResize}/>  
         </div>
         <Canvas canvasSize={canvasSize} pixelColors={pixelColors} handleHover={handleHover}/> 
@@ -32,9 +36,9 @@ export default function App() {
   );
 }
 
-function CleanButton() {
+function CleanButton({ handleClean }) {
   return (
-    <button>Clean</button>
+    <button onClick={handleClean}>Clean</button>
   );
 }
 
@@ -76,4 +80,3 @@ function drawCanvas(canvasSize, pixelColors, handleHover) {
 
   return pixels;
 }
-
