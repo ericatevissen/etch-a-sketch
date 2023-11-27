@@ -6,8 +6,8 @@ export default function App() {
   const [pixelColors, setPixelColors] = useState(Array(canvasSize * canvasSize).fill("white"));
 
   function handleResize() {
-    let sizeInput = prompt("Size? Max: 64")
-    if (sizeInput > 64) sizeInput = 64;
+    let sizeInput = prompt("Size? Max: 128")
+    if (sizeInput > 128) sizeInput = 128;
     setCanvasSize(sizeInput);
     setPixelColors(Array(canvasSize * canvasSize).fill("white"));
   }
